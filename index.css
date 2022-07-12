@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 可视区域 */
+.main {
+  background-image: url(./img/banner-bg.jpg);
+  height: 546px;
+  /* 让自己相对自己定位 */
+  position: relative;
+}
+
+/* 内容区域 */
+.content-container {
+  width: 874px;
+  height: 458px;
+  background-image: url(./img/center_bg.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 产品列表项 （通用）*/
+.prize-list {
+  width: 270px;
+  height: 100px;
+  background: #622230;
+  padding: 5px;
+  border: 1px solid #722536;
+  border-radius: 5px;
+  text-align: center;
+  position: absolute;
+}
+
+/* 产品图片 */
+.prize-list > img {
+  max-height: 75px;
+  position: absolute;
+  left: 30px;
+  top: 15px;
+}
+
+/* 产品详情 */
+.prize-list > span {
+  font-size: 19px;
+  color: #ffb100;
+  font-weight: bold;
+  position: absolute;
+  left: 102px;
+  top: 36px;
+  width: 164px;
+}
+
+/* 每项产品单独定位 */
+.prize-list:nth-child(1) {
+  top: 22px;
+  left: 26px;
+}
+.prize-list:nth-child(2) {
+  top: 22px;
+  left: 302px;
+}
+.prize-list:nth-child(3) {
+  top: 22px;
+  right: 26px;
+}
+/* 特殊项 */
+.prize-list:nth-child(4) {
+  top: 129px;
+  right: 26px;
+  width: 100px;
+  height: 200px;
+}
+.prize-list:nth-child(5) {
+  bottom: 22px;
+  right: 26px;
+}
+.prize-list:nth-child(6) {
+  bottom: 22px;
+  left: 302px;
+}
+.prize-list:nth-child(7) {
+  bottom: 22px;
+  left: 26px;
+}
+/* 特殊项 */
+.prize-list:nth-child(8) {
+  top: 129px;
+  left: 26px;
+  width: 100px;
+  height: 200px;
+}
+
+/* 单独设置4、8项的排列 */
+.prize-list:nth-child(8) > img,
+.prize-list:nth-child(4) > img {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.prize-list:nth-child(8) > span,
+.prize-list:nth-child(4) > span {
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 36px;
+  top: auto;
+}
+
+/* 下面一排的图片单独调整 */
+.prize-list:nth-child(5) > img {
+  top: 12px;
+}
+.prize-list:nth-child(6) > img,
+.prize-list:nth-child(7) > img {
+  top: 25px;
+}
+
+/* 中间操作区域 */
+.content-controller {
+  width: 614px;
+  height: 198px;
+  background-image: url(./img/middle-bg.png);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+/* 左侧：抽奖次数显示 */
+.controller-left {
+  float: left;
+  margin: 56px 0 0 25px;
+}
+
+.controller-left > img {
+  float: left;
+  width: 81px;
+  height: 73px;
+}
+.controller-left > span {
+  float: right;
+  color: #ffd200;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 17px 0 0 18px;
+}
+
+/* 右侧：开始抽奖按钮 */
+.controller-right {
+  float: right;
+  margin: 50px 15px 0 0;
+  cursor: pointer;
+}
+
+/* 遮罩层（不可视区域） */
+.masker-dialog {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  left: 0;
+  top: 0;
+  /* 默认隐藏 */
+  display: none;
+}
+
+/* 弹出框 */
+.masker-content {
+  width: 400px;
+  background: #fff;
+  position: fixed;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+}
+
+/* 弹出框头部 */
+.content-head {
+  height: 50px;
+  line-height: 50px;
+  width: 100%;
+  background-color: #e99c3d;
+  color: #fff;
+  padding: 0 20px;
+}
+
+.content-head > .title {
+  font-size: 18px;
+  float: left;
+}
+
+.content-head > .close {
+  float: right;
+  font-size: 42px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/*获奖文案 */
+.content-detail {
+  width: 100%;
+  margin: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #622230;
+  text-align: center;
+}
+
+/* 再来一次 */
+.confirm-btn {
+  color: #fff;
+  float: right;
+  background: #fca825;
+  padding: 3px 7px;
+  margin: 0 20px 20px 0;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* 交互后产生的效果 */
+.active {
+  background-color: #ffd100;
+}
+.active > span {
+  color: #470c1b;
+}

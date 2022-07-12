@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>积分抽奖2</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <!-- 可视区域 -->
+    <div class="main">
+      <!-- 内容区域 -->
+      <div class="content-container">
+        <!-- 产品列表（共八项） -->
+        <div class="prize-list">
+          <!-- 产品图 -->
+          <img src="./img/prize_1.png" alt="" />
+          <!-- 产品介绍 -->
+          <span>IphoneX</span>
+        </div>
+        <div class="prize-list">
+          <img src="./img/prize_2.png" alt="" />
+          <span>现金50元</span>
+        </div>
+        <div class="prize-list">
+          <img src="./img/prize_3.png" alt="" />
+          <span>HUAWEI</span>
+        </div>
+        <div class="prize-list">
+          <img src="./img/prize_4.png" alt="" />
+          <span>现金10元</span>
+        </div>
+        <div class="prize-list">
+          <img src="./img/prize_5.png" alt="" />
+          <span>谢谢参与</span>
+        </div>
+        <div class="prize-list">
+          <img src="./img/prize_6.png" alt="" />
+          <span>手机优惠券</span>
+        </div>
+        <div class="prize-list">
+          <img src="./img/prize_7.png" alt="" />
+          <span>电脑优惠券</span>
+        </div>
+        <div class="prize-list">
+          <img src="./img/prize_8.png" alt="" />
+          <span>U盘</span>
+        </div>
+        <!-- 中间操作区域 -->
+        <div class="content-controller">
+          <!-- 左侧：抽奖次数显示 -->
+          <div class="controller-left">
+            <img src="./img/logo.png" />
+            <span>还可以抽奖<span class="prize-Txt">5</span>次</span>
+          </div>
+          <!-- 右侧：开始抽奖按钮 -->
+          <div class="controller-right">
+            <img src="./img/start_btn.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 遮罩层（不可视区域） -->
+    <div class="masker-dialog">
+      <!-- 弹出框 -->
+      <div class="masker-content">
+        <!-- 弹出框头部 -->
+        <div class="content-head">
+          <span class="title">温馨提示</span>
+          <span class="close">&times;</span>
+        </div>
+        <!-- 获奖文案 -->
+        <div class="content-detail">恭喜您获得了仙女一位</div>
+        <!-- 再来一次按钮 -->
+        <div class="confirm-btn">再来一次</div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
